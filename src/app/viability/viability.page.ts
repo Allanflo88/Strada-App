@@ -106,13 +106,12 @@ export class ViabilityPage implements AfterViewInit {
     
   }
 
-  calcViability(){
-
-  }
-
   async showModal(){
     const modal = this.modalController.create({
       component: ModalComponent,
+      componentProps: {
+        frete: this.frete
+      }
     });
     (await modal).present();
     this.currentModal = modal;
