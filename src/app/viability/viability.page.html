@@ -22,11 +22,22 @@
       placeholder="Destino"
       [(ngModel)]="final"
       (keyup)="updateRoute()"></ion-searchbar>
-    <div #map style="width:100%;height:calc(100% - 200px)"></div>
+    <div #map style="width:100%;height:calc(100% - 250px)"></div>
+    <ion-item>
+      <ion-label position="floating">Frete</ion-label>
+      <ion-input
+      type="text" 
+      prefix="R$ "
+      specialCharacters="[ 'R' ,'$' , ',', '.' ]"
+      mask="000.000,00"
+      [(ngModel)]="frete"
+      ></ion-input>
+    </ion-item>
+    
     <ion-button expand="block" 
       style="margin-top:20px" 
       (click)="showModal()"
-      [disabled]="!(origin.length || final.length)">Calcular viabilidade</ion-button>
+      [disabled]="!(origin.length || final.length || frete)">Calcular viabilidade</ion-button>
   </div>
   <div>
 

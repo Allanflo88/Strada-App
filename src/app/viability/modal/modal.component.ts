@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, LOCALE_ID } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-modal',
@@ -10,7 +11,8 @@ export class ModalComponent implements OnInit {
 
   constructor(private modalCtrl: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   async dismissModal(){
     this.modalCtrl.dismiss();

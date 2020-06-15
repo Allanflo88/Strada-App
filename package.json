@@ -30,6 +30,8 @@
     "@types/leaflet": "^1.5.12",
     "cordova-plugin-geolocation": "^4.0.2",
     "leaflet": "^1.6.0",
+    "ng2-currency-mask": "^9.0.2",
+    "ngx-mask-ionic": "^1.1.2",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

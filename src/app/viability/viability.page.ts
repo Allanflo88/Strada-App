@@ -4,6 +4,7 @@ import {} from 'googlemaps';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { ModalController } from '@ionic/angular';
 import { ModalComponent } from './modal/modal.component';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-viability',
@@ -19,10 +20,12 @@ export class ViabilityPage implements AfterViewInit {
   directionsRenderer: google.maps.DirectionsRenderer;
   showViabilidade: boolean = false;
   currentModal: Promise<HTMLIonModalElement>;
+  frete: string;
 
   constructor(private httpClient: HttpClient, 
     private geolocation: Geolocation, 
-    private modalController: ModalController) { }
+    private modalController: ModalController,
+    private currencyPipe: CurrencyPipe) { }
 
   async ngAfterViewInit() {
     this.directionsRenderer = new google.maps.DirectionsRenderer();
@@ -118,5 +121,4 @@ export class ViabilityPage implements AfterViewInit {
   async dismissModal(){
     (await this.currentModal).dismiss();
   }
-
 }

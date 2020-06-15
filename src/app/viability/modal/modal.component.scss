@@ -1,13 +1,15 @@
-$yellow: #FBD358;
-$gray: #7D7D7D;
-
 ion-content {
     --background: url('src/assets/images/asphalt.jpg')
 }
 
+$yellow: #FBD358;
+$gray: #7D7D7D;
+
 .container {
     display: flex;
     flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .side {
@@ -74,16 +76,22 @@ ion-content {
 }
 
 .box {
-    width: 100%;
+    width: 200px;
     height: 80px;
     background-color: $gray;
+    border-radius: 0 0 10px 10px;
 
     &>.title {
         background-color: $yellow;
-        text-align: center;
         font-size: large;
+        height: 30px;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
     }
     &>.value {
+        height: 50px;
         color: white;
         display: flex;
         flex-flow: row;
